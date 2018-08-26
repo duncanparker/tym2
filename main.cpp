@@ -104,7 +104,7 @@ int answer_to_connection (
 	}
 
 	MHD_destroy_response (response);
-
+	delete r;
 	return ret;
 }
 
