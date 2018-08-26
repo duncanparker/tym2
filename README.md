@@ -31,3 +31,4 @@ Right now (this inital series of commits), tym2 serves little more than a tutori
 ## TODO Next
 
 * makefile.
+* organice source files into a src folder :)
