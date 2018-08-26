@@ -26,6 +26,10 @@ Router::Router(const char * url){
 		_filepath = "public/index.html";
 		_isfile = true;
 		_responseCode = 200;
+	} else if (0 == strcmp(_url, "/favicon.ico")) {
+		_filepath = "public/images/favicon.ico";
+		_isfile = true;
+		_responseCode = 200;
 	} else if (0 == strncmp(_url, "/public", 7)) {
 		_filepath = string(_url);
 		// remove leading slash
@@ -62,6 +66,7 @@ Router::Router(const char * url){
 		// check for js
 		ext = ext.substr(1, 3);
 		if(0 == ext.compare(".js")){ _contenttype = "text/javascript"; }
+		if(0 == ext.compare(".ico")){ _contenttype = "image/x-icon"; }
 	}
 }
 
