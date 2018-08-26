@@ -1,0 +1,65 @@
+/*
+	tym2 - A simple C++ framework, utilizing libmicrohttpd to serve simple web pages
+	Copyright (C) 2018 Duncan Parker
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+body {
+	font-family: sans-serif;
+	font-size: 11pt;
+	margin: 0;
+	padding: 0;
+}
+ul.nav {
+	font-size: 16px;
+	padding: 10px;
+	margin: 0px;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+}
+ul.nav li, ul.nav li a {
+	width: 50px;
+	height: 50px;
+}
+ul.nav li a {
+	display: block;
+	position: absolute;
+}
+ul.nav li.btn.home a {
+	transform: translateY(-50px);
+}
+ul.nav li.btn.home::before {
+	content: '\1F3E0';
+	font-size: 50px;
+}
+ul.nav li.btn.github {
+	background-image: url('/public/images/GitHub-Mark-120px-plus.png');
+	background-size: contain;
+}
+ul.nav li.btn.github:hover {
+	background-image: url('/public/images/GitHub-Mark-Light-120px-plus.png');
+	background-color: #000;
+}
+section {
+	padding: 0 20px 0 20px;
+}
+section h1 {
+	text-transform: uppercase;
+}
+section h2 {
+	text-transform: lowercase;
+}
