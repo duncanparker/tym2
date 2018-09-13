@@ -17,16 +17,17 @@
 */
 #include <fstream>
 #include <streambuf>
-
-using namespace std;
+#include <string>
+#include <iostream>
 
 class Router{
 private:
 	const char * _url;
 	int _responseCode;
 	bool _isfile;
-	string _filepath;
-	string _contenttype;
+	std::string _filepath;
+	std::string _contenttype;
+	std::string _stringContent;
 public:
 	/// Constructor - creates a instance of the Router Object.
 	///	@param {const char*} url: the URL in the request made to the server.
@@ -36,7 +37,7 @@ public:
 	/// GetContent - returns raw string output of the route.
 	/// @returns {string}: raw string output of the route.
 	/// @remarks: typically used if Router::IsFile() is false.
-	string GetContent();
+	std::string GetContent();
 
 	/// IsFile - used to determine if the URL is directly requesting a file.
 	/// @returns {bool}: true if the resource request is a file, false if resource requested is not a file.

@@ -44,8 +44,6 @@
 
 #define PORT 8888
 
-using namespace std;
-
 int answer_to_connection (
 		void *cls, struct MHD_Connection *connection,
 		const char *url,
