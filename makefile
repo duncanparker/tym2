@@ -1,8 +1,8 @@
 CFLAGS = -std=c++11
 LDFLAGS = -lmicrohttpd
 
-tym2: main.cpp router.cpp
-	g++ $(CFLAGS) -o tym2 main.cpp router.cpp $(LDFLAGS)
+tym2: src/main.cpp src/router.cpp
+	g++ $(CFLAGS) -o tym2 src/main.cpp src/router.cpp $(LDFLAGS)
 
 test: tym2
 	./tym2
